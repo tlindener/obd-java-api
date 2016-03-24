@@ -58,7 +58,7 @@ public class DistanceMILOnCommand extends ObdCommand
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return useImperialUnits ? "m" : "km";
+        return useImperialUnits ? " m" : " km";
     }
 
     /** {@inheritDoc} */

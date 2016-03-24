@@ -81,7 +81,7 @@ public class SpeedCommand extends ObdCommand implements SystemOfUnits {
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return useImperialUnits ? "mph" : "km/h";
+        return useImperialUnits ? " mph" : " km/h";
     }
 
     /** {@inheritDoc} */

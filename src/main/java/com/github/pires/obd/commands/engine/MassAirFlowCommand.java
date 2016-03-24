@@ -51,7 +51,7 @@ public class MassAirFlowCommand extends ObdCommand {
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return "g/s";
+        return " g/s";
     }
 
     /**
