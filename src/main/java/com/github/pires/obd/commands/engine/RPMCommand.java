@@ -51,7 +51,7 @@ public class RPMCommand extends ObdCommand {
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return "RPM";
+        return " RPM";
     }
 
     /** {@inheritDoc} */

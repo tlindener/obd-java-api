@@ -48,7 +48,7 @@ public class ModuleVoltageCommand extends ObdCommand {
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return "V";
+        return " V";
     }
 
     /** {@inheritDoc} */

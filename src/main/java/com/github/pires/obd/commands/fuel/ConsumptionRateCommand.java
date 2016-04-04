@@ -51,7 +51,7 @@ public class ConsumptionRateCommand extends ObdCommand {
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return "L/h";
+        return " L/h";
     }
 
     /**
