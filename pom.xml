@@ -14,7 +14,7 @@
         <packaging>jar</packaging>
 
         <name>OBD Java API</name>
-        <url>https://github.com/pires/obd-java-api</url>
+        <url>https://github.com/tlindener/obd-java-api</url>
         <description>OBD Java API compatible with ELM327.</description>
 
         <licenses>
@@ -37,6 +37,14 @@
                 <id>pjpires</id>
                 <name>Paulo Pires</name>
                 <email>pjpires@gmail.com</email>
+                <roles>
+                    <role>developer</role>
+                </roles>
+            </developer>
+			            <developer>
+                <id>tlindener</id>
+                <name>Tobias Lindener</name>
+                <email>tobias.lindener@gmail.com</email>
                 <roles>
                     <role>developer</role>
                 </roles>
