@@ -87,7 +87,7 @@ public abstract class PressureCommand extends ObdCommand implements
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return useImperialUnits ? "psi" : "kPa";
+        return useImperialUnits ? " psi" : " kPa";
     }
 
 }

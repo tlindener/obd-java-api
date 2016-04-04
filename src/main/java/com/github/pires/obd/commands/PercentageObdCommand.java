@@ -53,7 +53,7 @@ public abstract class PercentageObdCommand extends ObdCommand {
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return "%";
+        return " %";
     }
 
     /** {@inheritDoc} */

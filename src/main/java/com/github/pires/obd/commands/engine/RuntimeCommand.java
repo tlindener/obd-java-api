@@ -55,7 +55,7 @@ public class RuntimeCommand extends ObdCommand {
     /** {@inheritDoc} */
     @Override
     public String getResultUnit() {
-        return "s";
+        return " s";
     }
 
     /** {@inheritDoc} */
