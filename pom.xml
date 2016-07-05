@@ -10,7 +10,7 @@
 
         <groupId>com.github.pires</groupId>
         <artifactId>obd-java-api</artifactId>
-        <version>1.0-RC16-SNAPSHOT</version>
+        <version>1.0-RC17</version>
         <packaging>jar</packaging>
 
         <name>OBD Java API</name>

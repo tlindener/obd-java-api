@@ -69,22 +69,20 @@ public abstract class ObdCommand {
 	 * <p>
 	 * This method CAN be overriden in fake commands.
 	 *
-	 * @param in
-	 *            a {@link java.io.InputStream} object.
-	 * @param out
-	 *            a {@link java.io.OutputStream} object.
-	 * @throws java.io.IOException
-	 *             if any.
-	 * @throws java.lang.InterruptedException
-	 *             if any.
+	 * @param in  a {@link java.io.InputStream} object.
+	 * @param out a {@link java.io.OutputStream} object.
+	 * @throws java.io.IOException            if any.
+	 * @throws java.lang.InterruptedException if any.
 	 */
-	public void run(InputStream in, OutputStream out) throws IOException, InterruptedException {
-		start = System.currentTimeMillis();
-		sendCommand(out);
-		readResult(in);
-		end = System.currentTimeMillis();
+	public void run(InputStream in, OutputStream out) throws IOException,
+					InterruptedException {
+			synchronized (ObdCommand.class) {//Only one command can write and read a data in one time.
+					start = System.currentTimeMillis();
+					sendCommand(out);
+					readResult(in);
+					end = System.currentTimeMillis();
+			}
 	}
-
 	/**
 	 * Sends the OBD-II request.
 	 * <p>
@@ -408,5 +406,20 @@ public abstract class ObdCommand {
 	public final String getCommandPID() {
 		return cmd.substring(3);
 	}
+
+	@Override
+ public boolean equals(Object o) {
+		 if (this == o) return true;
+		 if (o == null || getClass() != o.getClass()) return false;
+
+		 ObdCommand that = (ObdCommand) o;
+
+		 return cmd != null ? cmd.equals(that.cmd) : that.cmd == null;
+ }
+
+ @Override
+ public int hashCode() {
+		 return cmd != null ? cmd.hashCode() : 0;
+ }
 
 }
